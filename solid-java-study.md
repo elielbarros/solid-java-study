@@ -37,7 +37,12 @@ for(Reajuste r : reajustes) {
 - Ela soh nao pode mudar quando a mudança tem que acontecer em outra classe... Se mudar outra classe significar ter que mudar a classe funcionario, significa que tem algum problema de SRP
 - Esse principio tem o objetivo de deixar as classes coesas
 
-# (O) 
+# (O) Open Closed Principle
+- Principio do aberto fechado
+- Vc nao precisa abrir seu peito pra colocar um casaco
+- Usamos interface e polimorfismo para tornar a classe mais extensivel
+- "Entidades de software (classes, modulos, funcoes e etc) devem estar abertas para extensao, porem fechadas para modificacao" (Bertrand Meyer)
+- Quanto menos modificarmos uma classe menos bug a ser introduzido no software
 
 # (L) 
 
