@@ -44,8 +44,20 @@ for(Reajuste r : reajustes) {
 - "Entidades de software (classes, modulos, funcoes e etc) devem estar abertas para extensao, porem fechadas para modificacao" (Bertrand Meyer)
 - Quanto menos modificarmos uma classe menos bug a ser introduzido no software
 
-# (L) 
+# (L) Liskov Substitution Principle
+- Se parece com um pato faz quack igual um pato mas precisa de baterias, entao nao eh um pato, ta usando abstracao da maneira incorreta
+- Usar heranca errado, acaba tendo comportamentos errados.
+- "Se q(x) eh uma propriedade demonstravel dos objetos x de tipo T, entao q(y) deve ser verdadeiro para objetos y de tipo S, onde S eh um subtipo de T" (Barbara Liskov)
+- Se ferir o principio de Liskov, entao o uso da heranca estah incorreto!
 
 # (I) 
 
 # (D) 
+
+### Extras
+- Tomar cuidado com herança. O ideal eh favorecer a composicao ao inves da heranca.
+- Em alguns casos eh possivel que a composicao seja melhor que heranca.
+- A composicao eh uma classe com informacoes coincidentes entre duas classes
+- Pode ser que essa informacao estava em uma classe e vc queira usar em outra
+- Ao inves de estender dessa classe, tirar as informacoes coincidentes para uma pequena classe e instancanciar nas duas classes. Isso eh composicao.
+- 
