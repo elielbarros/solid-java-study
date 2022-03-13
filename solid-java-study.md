@@ -14,3 +14,18 @@
 - "Classes nao encapsuladas permitem violacao de regras de negocio, alem de aumentarem o acomplamento"
 - Getters e setters por si só não fornecem nenhum tipo de encapsulamento.
 - Encapsulamento ajuda no uso correto dos objetos.
+
+# Acoplamento
+
+#### Acao de acoplar, agrupamento aos pares
+- Exemplo ruim:
+```
+double valorTotalReajusts = 0;
+List<Reajuste> reajustes = funcionario.getReajustes();
+for(Reajuste r : reajustes) {
+    valorTotalReajustes += r.getValor();
+}
+```
+- Fazer uma regra de negocio que devia estar dentro da classe Funcionario, dentro de outra classe que ta chamando a classe funcionario. É um forte acoplamento.
+- "Classes acopladas causam fragilidade no codigo da aplicacao, o que dificulta a sua manutencao"
+
