@@ -29,3 +29,18 @@ for(Reajuste r : reajustes) {
 - Fazer uma regra de negocio que devia estar dentro da classe Funcionario, dentro de outra classe que ta chamando a classe funcionario. É um forte acoplamento.
 - "Classes acopladas causam fragilidade no codigo da aplicacao, o que dificulta a sua manutencao"
 
+# (S) Single Responsibility Principle
+- Principio da Responsabilidade unica.
+- Soh pq vc pode colocar um sistema inteiro em uma unica classe, nao significa que vc deveria fazer assim
+- "Uma classe deveria ter apenas um unico motivo para mudar" (Robert Martin, Uncle Bob)
+- A classe tem que mudar sempre que tiver alguma alteracao relacionada a ela
+- Ela soh nao pode mudar quando a mudança tem que acontecer em outra classe... Se mudar outra classe significar ter que mudar a classe funcionario, significa que tem algum problema de SRP
+- Esse principio tem o objetivo de deixar as classes coesas
+
+# (O) 
+
+# (L) 
+
+# (I) 
+
+# (D) 
