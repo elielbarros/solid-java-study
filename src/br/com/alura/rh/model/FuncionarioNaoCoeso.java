@@ -29,6 +29,5 @@ public class FuncionarioNaoCoeso {
     * Essa é uma classe não coesa.
     * Possui metodos e atributos que não estão relacionados a classe em si
     * Por exemplo, a classe é de funcionarios mas possui atributos e metodos relacionados a endereço
-    * Classes não coesas tendem a crescer indefinidamente, o que as tornam dificeis de manter
     */
 }
