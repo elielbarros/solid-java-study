@@ -2,7 +2,7 @@ package br.com.alura.rh.model;
 
 public enum Cargo {
 
-	ASSISTENTE{
+	ASSISTENTE {
 		@Override
 		public Cargo getProximoCargo() {
 			return ANALISTA;
@@ -28,4 +28,5 @@ public enum Cargo {
 	};
 
 	public abstract Cargo getProximoCargo();
+
 }

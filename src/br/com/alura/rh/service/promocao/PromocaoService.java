@@ -5,17 +5,19 @@ import br.com.alura.rh.model.Cargo;
 import br.com.alura.rh.model.Funcionario;
 
 public class PromocaoService {
-    public void promover(Funcionario funcionario, boolean metaBatida) {
+	
+	public void promover(Funcionario funcionario, boolean metaBatida) {
+		Cargo cargoAtual = funcionario.getCargo();
+		if (Cargo.GERENTE == cargoAtual) {
+			throw new ValidacaoException("Gerentes nao podem ser promovidos!");
+		}
+		
+		if (metaBatida) {
+			Cargo novoCargo = cargoAtual.getProximoCargo();
+			funcionario.promover(novoCargo);
+		} else {
+			throw new ValidacaoException("Funcionario nao bateu a meta!");
+		}
+	}
 
-        Cargo cargoAtual = funcionario.getDadosPessoais().getCargo();
-        if(Cargo.GERENTE == cargoAtual) {
-            throw new ValidacaoException("Gerentes nao podem ser promovidos");
-        }
-
-        if(!metaBatida) {
-            throw new ValidacaoException("Funcionario nao bateu a meta!");
-        }
-        Cargo novoCargo = cargoAtual.getProximoCargo();
-        funcionario.promover(novoCargo);
-    }
 }
