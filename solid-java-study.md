@@ -50,9 +50,22 @@ for(Reajuste r : reajustes) {
 - "Se q(x) eh uma propriedade demonstravel dos objetos x de tipo T, entao q(y) deve ser verdadeiro para objetos y de tipo S, onde S eh um subtipo de T" (Barbara Liskov)
 - Se ferir o principio de Liskov, entao o uso da heranca estah incorreto!
 
-# (I) 
+# (I) Interface Segregation Principle
+- Dispositivo com muitas interfaces de uso ?
+- Nao usar interfaces com metodos que nao serao usados.
+- Entra no principio ISP
+- "Uma classe nao deveria ser forcada a depender de metodos que nao utilizara!" (Robert Martin, Uncle Bob)
+- Eh preferivel criar uma interface especifica para os metodos extras, caso possua.
+- Manter a classe da interface com os metodos gerais, apenas com metodos gerais! Se comecar a ter metodos mais especificos, colocar esses metodos em outra interface
 
-# (D) 
+
+# (D) Dependency Inversion Principle
+- Quando duas classes possuem metodos iguais, por exemplo, validar, podemos usar Interface e fazer um contrato entre as duas classes que possuem o mesmo metodo. Assim quem quiser chamar as demais validacoes que houver, serah necessario passar apenas uma lista de classes que cuidam de validacao.
+- Um exemplo estah na classe ReajusteService. Usamos interface para Validacao, duas classes que implementam a interface e validamos no reajuste, apenas passando uma lista das validacoes que desejamos fazer. Se houver mais validacoes, nao precisamos alterar nossa classe ReajusteService.
+- Esse principio fala, se vc quer usar uma lampada, vc nao vai soldar a lampada direto ao fio. Voce vai usar uma tomada. A tomada eh a abstracao.
+- "Abstracoes nao devem depender dee implementacoes. Implementacoes devem depender de abstracoes." (Robert Martin, Uncle Bob)
+- Nos temos duas implementacoes que dependem de uma abstracao.
+- ValidacaoPercentualReajuste e ValidacaoPeridiocidadeEntreReajustes sao implementacoes que dependem da abstracao ValidacaoReajuste (Uma interface)
 
 ### Extras
 - Tomar cuidado com herança. O ideal eh favorecer a composicao ao inves da heranca.
